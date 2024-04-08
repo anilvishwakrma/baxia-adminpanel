@@ -7,13 +7,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins" !important;
 }
 
 body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Poppins";
+    font-family: "Poppins" !important;
 }
 
 
@@ -30,20 +31,25 @@ a {
 /* =========== Sitebar ============= */
 ul.item_menu a {
     color: #858585;
-    font-size: 13px;
+    font-size: 12.2px;
     display: flex;
     align-items: center;
     font-weight: 400;
+    /* letter-spacing: 0.5px; */
 }
 
 ul.item_menu a:hover {
     color: #FFD700;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 ul.item_menu a.active {
     color: #FFD700;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+ul.item_menu a.active path {
+    fill: #FFD700;
 }
 
 ul.item_menu a img {
@@ -53,7 +59,7 @@ ul.item_menu a img {
 
 ul.item_menu li {
     padding: 0px 0;
-    height: 35.99px;
+    height: 32px;
     list-style: none;
 }
 
@@ -93,12 +99,14 @@ ul.item_menu {
 }
 
 .sitebar {
-    width: 265px;
+    width: 230px;
     background: #0A0A0A;
     color: #fff;
-    padding: 12px 16px;
+
     height: 100%;
     max-width: 100%;
+    flex-shrink: 0;
+    position: relative;
 }
 
 .main_container {
@@ -108,6 +116,13 @@ ul.item_menu {
 .sitebar_box_fix {
     overflow: scroll;
     height: 100vh;
+    position: fixed;
+    width: 230px;
+    background: #0A0A0A;
+    left: 0;
+    top: 0;
+    padding: 12px 16px;
+    padding-top: 23px;
 }
 
 .sitebar_box_fix::-webkit-scrollbar {
@@ -130,9 +145,11 @@ ul.item_menu {
 }
 
 .site_user_name_mial h3 {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     margin: 0;
+    color: #fff;
+    padding-bottom: 4px;
 }
 
 .site_user_name_mial p {
@@ -143,9 +160,13 @@ ul.item_menu {
 }
 
 .site_user_arrow img {
-    width: 15px;
-    height: 15px;
+    width: 5px;
+    /* height: 15px; */
     margin: 0;
+}
+
+.site_bar_close_arrow img {
+    width: 5px;
 }
 
 .sitebar button {
@@ -156,15 +177,20 @@ ul.item_menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 18px;
-    font-size: 14px;
+    margin-top: 20px;
+    font-size: 12.5px;
     color: #0A0A0A;
     font-weight: 600;
     border: none;
 }
 
+ul.item_menu a svg {
+    width: 13px;
+}
+
 .sitebar button img {
     padding-right: 8px;
+    width: 22px
 }
 
 /* ======== sitebar END =========== */
@@ -172,6 +198,7 @@ ul.item_menu {
 .main_page_content {
     padding: 23px;
     width: 100%;
+    flex-grow: 1;
 }
 
 .wellcome_section {
@@ -191,7 +218,7 @@ ul.item_menu {
 }
 
 .Welcome_to_Baxia p {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     color: #000;
 }
@@ -199,11 +226,16 @@ ul.item_menu {
 button.Welcome_to_Baxia_button {
     background: #0A0A0A;
     color: #ffff;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     border-radius: 40px;
-    padding: 10px 28px;
+    padding: 9px 19px;
     border: none;
+}
+
+.Free_dashboard_tour_login p {
+    margin: 0;
+    font-size: 10.50px;
 }
 
 .Account_tabs ul li.tab {
@@ -211,7 +243,7 @@ button.Welcome_to_Baxia_button {
     padding: 0px 34px;
     border-radius: 22px;
     padding: 7px 18px;
-    font-size: 14px;
+    font-size: 12px;
     color: #858585;
     font-weight: 400;
     margin-right: 3px;
@@ -224,10 +256,11 @@ button.Welcome_to_Baxia_button {
 }
 
 .Account_tabs ul {
-    border-bottom: 0.5px dashed #858585;
+    border-bottom: 0.5px dashed #85858559;
     padding-bottom: 22px;
     padding-top: 18px;
     margin-bottom: 15px;
+    padding-left: 0;
 }
 
 .Free_dashboard_tour_login {
@@ -238,9 +271,11 @@ button.Welcome_to_Baxia_button {
 }
 
 .Free_dashboard_tour_login h2 {
-    font-size: 16px;
+    font-size: 14px;
     color: #0A0A0A;
     font-weight: 400;
+    margin: 0;
+    padding-bottom: 8px;
 }
 
 .Free_dashboard_tour_login h2 span {
@@ -250,11 +285,11 @@ button.Welcome_to_Baxia_button {
 .Free_dashboard_tour_login button {
     background: #FFD700;
     border: none;
-    padding: 8px 28px;
+    padding: 7px 23px;
     border-radius: 22px;
     color: #0A0A0A;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 12px;
     margin-top: 16px;
 }
 
@@ -264,4 +299,1413 @@ button.Welcome_to_Baxia_button {
     margin-bottom: 10px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* ==========Accountoverview========= */
+.account_Stats_grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.account_Stats_box {
+    background: #000000;
+    width: 23%;
+    background: #FFF9D9;
+    border-radius: 15px;
+    padding: 12px 20px;
+}
+
+p.account_Stats_icons {
+    background: #FFD700;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+p.account_Stats_icons svg {
+    width: 18.63px
+}
+
+.account_Stats_box h2 {
+    color: #0A0A0A;
+    font-size: 18px;
+    font-weight: 800;
+    padding-top: 12px;
+    margin: 0;
+}
+
+.account_Stats_box p {
+    margin: 0;
+    font-size: 13px;
+    color: #0A0A0A;
+    font-weight: 400;
+}
+
+.Trading.Objective_grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 0.5px solid #8585852e;
+    border-radius: 20px;
+    padding: 30px 27px;
+}
+
+.Accountoverview_status_cont {
+    margin-bottom: 30px;
+}
+
+.Objective_box {
+    width: 50%;
+    display: flex;
+}
+
+.Objective_box_content {
+    width: 100%;
+    padding: 0 15px;
+}
+
+.Objective_box:nth-child(1) {
+    border-bottom: 0.5px dashed #85858559;
+    border-right: 0.5px dashed #85858559;
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
+
+.Objective_box:nth-child(2) {
+    border-bottom: 0.5px dashed #85858559;
+    /* border-right: 0.5px solid #85858559; */
+    padding-bottom: 30px;
+    padding-left: 20px;
+
+}
+
+.Objective_box:nth-child(3) {
+    /* border-bottom: 0.5px solid #85858559; */
+    border-right: 0.5px dashed #85858559;
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
+.Objective_box:nth-child(4) {
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.Objective_box_content_heding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Objective_box_content_heding button {
+    border: none;
+    border: 0.5px solid #858585;
+    background: #F1F2F4;
+    color: #0A0A0A;
+    font-size: 9px;
+    font-weight: 400;
+    border-radius: 30px;
+    padding: 3px 8px;
+}
+
+.Objective_box:nth-child(3) .Objective_box_content_heding button {
+    border: 0.5px solid #0EAC3A;
+    background: #0EAC3A26;
+    color: #0EAC3A;
+}
+
+.Objective_box:nth-child(4) .Objective_box_content_heding button {
+    border: 0.5px solid #0EAC3A;
+    background: #0EAC3A26;
+    color: #0EAC3A;
+}
+
+.Objective_box:nth-child(3) span.Objective_box_content_span,
+.Objective_box:nth-child(4) span.Objective_box_content_span {
+    color: #0EAC3A !important;
+}
+
+.Objective_box:nth-child(1) span.Objective_box_content_span,
+.Objective_box:nth-child(2) span.Objective_box_content_span {
+    color: #FFD700 !important;
+}
+
+.Objective_box_content_heding h2 {
+    margin: 0;
+    font-size: 14px;
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.Accountoverview_status_Trading {
+    margin-bottom: 30px;
+}
+
+.Objective_box_content p {
+    margin: 0;
+    font-size: 11px;
+    color: #858585;
+    padding-bottom: 5px;
+}
+
+.Objective_box_icos {
+    background: #FFF9D9;
+    width: 100%;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 42px;
+}
+
+.Objective_box_icos svg {
+    width: 16px;
+}
+
+.Consistency_History table {
+    width: 100%;
+}
+
+tr.Consistency_History_table-heading {
+    background: #F1F2F4;
+    border-radius: 10px;
+}
+
+.Consistency_History table td,
+.Consistency_History table th {
+    padding: 11px;
+    font-size: 10px;
+    color: #858585;
+    font-weight: 400;
+}
+
+.Consistency_History table th {
+    text-transform: uppercase;
+}
+
+.Consistency_History table th img {
+    width: 12px;
+}
+
+.Consistency_History table th {
+    color: #0A0A0A;
+    font-weight: 400;
+}
+
+.Heading {
+    font-size: 16px;
+    color: #0A0A0A;
+    font-weight: 600;
+    height: 45px;
+}
+
+.Accountoverview_page {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Accountoverview_acount_ballen {
+    max-width: 290px;
+    width: 100%;
+    flex-grow: 1;
+    background: #fff;
+}
+
+.Accountoverview_user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px dashed #85858559;
+    padding-bottom: 12px;
+}
+
+.Accountoverview_user_name {
+    display: flex;
+    align-items: center;
+}
+
+.Accountoverview_user_name h3 {
+    font-size: 15px;
+    color: #0A0A0A;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Accountoverview_user_name p {
+    font-size: 11px;
+    color: #858585;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Accountoverview_user_SVG svg {
+    width: 10px;
+}
+
+.Accountoverview_user_name img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px
+}
+
+.Accountoverview_acount_options h3 {
+    font-size: 13px;
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.Accountoverview_acount_options li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #858585;
+    padding-top: 8px;
+}
+
+.Accountoverview_acount_options p {
+    margin: 0;
+    margin-left: 5px;
+    margin-right: 2px;
+    font-size: 12px;
+}
+
+.Accountoverview_acount_options li svg {
+    width: 13px;
+}
+
+svg.Trading_right_arrow {
+    width: 8px !important;
+}
+
+tr.Consistency_History_table-heading th {
+    padding-right: 5px;
+    font-weight: 600;
+}
+
+.Accountoverview_acount_options ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Accountoverview_acount_options {
+    padding-top: 20px;
+}
+
+.Accountoverview_acount_options li p.AC_Balance {
+    color: #0A0A0A;
+}
+
+.Accountoverview_acount_box_1 {
+    border: 0.5px solid #8585852e;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Accountoverview_status {
+    width: 100%;
+    padding-right: 20px;
+}
+
+.Account_growth {
+    background: #FFD700;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.Account_growth_prste {
+    display: flex;
+    align-items: center;
+    background: #0A0A0A;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    padding: 16px;
+    color: #fff;
+}
+
+.Account_growth_prste_svg {
+    background: #FFD700;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.Account_growth_prste_svg svg {
+    width: 23px;
+}
+
+.Account_growth_prste h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Account_growth_prste p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Account_growth_mail {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Account_growth_mail_svg {
+    width: 40px;
+    height: 40px;
+}
+
+.Account_growth_mail_svg svg {
+    width: 34px;
+}
+
+.Account_growth_mail_content h5 {
+    margin: 0;
+    font-size: 13.20px;
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.Account_growth_mail_content p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #858585;
+}
+
+.Account_growth_Time h3 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0A0A0A;
+}
+
+.Account_growth_Time p {
+    font-size: 13px;
+    color: #0A0A0A;
+    font-weight: 400;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.Account_growth_Time {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.Account_growth_Time h1 {
+    font-size: 32px;
+    color: #0A0A0A;
+    font-weight: 400;
+}
+
+/* =============== profile ============ */
+.profile_User_information_input {
+    display: flex;
+    align-items: center;
+    width: 77%;
+    justify-content: space-between;
+}
+
+.profile_User_information_input span {
+    display: block;
+    font-size: 12px;
+    color: #0A0A0A;
+    font-weight: 500;
+    padding-bottom: 3px;
+}
+
+.profile_User_information_input input {
+    background: #F1F2F4;
+    border: none;
+    font-size: 11.50px;
+    color: #858585;
+    width: 100%;
+    height: 100%;
+}
+
+.FaEye_password {
+    background: #F1F2F4;
+    border-radius: 30px;
+    height: 39px;
+    padding: 0 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.profile_page_bg img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile_User {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+    bottom: 55px;
+}
+
+.profile_User_cont {
+    display: flex;
+    align-items: end;
+}
+
+.profile_User_cont img {
+    width: 130px;
+    height: 130px;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px 0px #01001D1A;
+}
+
+.profile_User_cont h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.profile_User_name p {
+    margin: 0;
+    font-size: 12px;
+    color: #858585;
+    font-weight: 400;
+}
+
+.profile_User button {
+    height: 34px;
+    border: 0.5px solid #AEB0B7;
+    border-radius: 40px;
+    padding: 0 13px;
+    background: #fff;
+    color: #0A0A0A;
+    font-size: 11px;
+    font-weight: 600;
+    position: relative;
+    bottom: 12px;
+}
+
+.profile_User_name {
+    padding-left: 12px;
+    position: relative;
+    bottom: 12px;
+}
+
+.profile_User_information_input .input_group {
+    width: 46%;
+    margin-bottom: 18px;
+}
+
+
+/* =============== Tranding_chart ============ */
+.Tranding_chart {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dashed #85858559;
+    padding-bottom: 25px;
+    margin-bottom: 24px;
+}
+
+.Graph_chaet {
+    background: #F1F2F4;
+    max-width: 290px;
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.Graph_chaet_heding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.Graph_chaet_heding h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A0A0A;
+}
+
+.grapg_serch {
+    background: #FFFFFF;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 13px;
+}
+
+.grapg_serch img {
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+}
+
+.grapg_serch input {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    padding: 3px 0;
+    font-weight: 400;
+    color: #858585;
+}
+
+p.Reset_All_grapd {
+    margin: 0;
+    font-size: 12px;
+    color: #858585;
+    text-align: right;
+    padding: 6px 0;
+    border-bottom: 1px solid #858585;
+    width: fit-content;
+    padding-bottom: 0;
+    margin-bottom: 6px;
+}
+
+.Reset_All_grapd_div {
+    display: flex;
+    justify-content: end;
+}
+
+.check_box_grapg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.check_grpg_box input {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #858585;
+    border-radius: 0.5px;
+    margin-right: 2px;
+}
+
+.check_grpg_box span {
+    font-size: 11px;
+    font-weight: 400;
+    color: #0A0A0A;
+}
+
+.USDCD_grapg_srcal span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+}
+
+.USDCD_grapg_srcal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.USDCD_grapg_srcal p {
+    color: #0A0A0A;
+    font-size: 12px;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.Topup_Reset_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Topup_Reset_heading select {
+    border: 0.5px solid #AEB0B7;
+    height: 33px;
+    border-radius: 30px;
+    padding: 0 20px;
+    font-size: 12px;
+    color: #858585;
+    width: 165px;
+    padding: 0 11px;
+}
+
+.Topup_Reset_heading .Heading {
+    height: auto;
+}
+
+.DetailedStats_grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.DetailedStats_grid_box {
+    width: 32%;
+    background: #F1F2F4;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.DetailedStats_grid_box ul {
+    padding: 0px;
+    list-style: none;
+    border: navajowhite;
+}
+
+li.DetailedStats_grid_box_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #AEB0B7;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+li.DetailedStats_grid_box_items:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+li.DetailedStats_grid_box_items b {
+    font-size: 12.50px;
+    font-weight: 500;
+    color: #000000;
+}
+
+li.DetailedStats_grid_box_items.line_bg_color b {
+    position: relative;
+}
+
+li.DetailedStats_grid_box_items.line_bg_color b:after {
+    background: #0EAC3A;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -34px;
+    width: 20px;
+    height: 7px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+li.DetailedStats_grid_box_items.line_bg_color b:before {
+    background: #FF2727;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 20px;
+    height: 7px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+li.DetailedStats_grid_box_items p {
+    margin: 0;
+    font-size: 12px;
+    color: #858585;
+    font-weight: 400;
+}
+
+li.DetailedStats_grid_box_items p img {
+    width: 13px;
+}
+
+.TradingOverview_page .Account_tabs ul {
+    padding-left: 0;
+}
+
+.Trading_History tr.Consistency_History_table-heading th {
+    text-transform: uppercase;
+}
+
+.Trade_Growth_View_filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.Trade_Growth_View_filter h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0A0A0A;
+    margin: 0;
+}
+
+.Trade_Growth_View_filter_cont {
+    display: flex;
+    align-items: center;
+}
+
+.Trade_Growth_View_filter_cont_calss {
+    background: #F1F2F4;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 7px 13px;
+}
+
+.Trade_Growth_View_filter_cont_calss div {
+    display: flex;
+    align-items: center;
+}
+
+.Trade_Growth_View_filter_cont_calss div input {
+    border: none;
+    background: transparent;
+    width: 60px;
+}
+
+.Trade_Growth_View_filter_cont_calss div span {
+    font-size: 12px;
+    color: #858585;
+    font-weight: 400;
+}
+
+.Trade_Growth_View_filter_cont h3 {
+    margin-right: 10px;
+}
+
+.Trade_Growth_View_filter_cont svg {
+    margin-left: 10px;
+    width: 34px;
+}
+
+.TradingAnalytics_chart {
+    padding-right: 18px;
+    margin-bottom: 20px;
+}
+
+.profile_page_heding {
+    color: #0A0A0A;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 13px;
+}
+
+.profile_page .Account_tabs {
+    position: relative;
+    bottom: 40px;
+}
+
+/* =========== Competition ========== */
+.Competition_BG {
+    width: 100%;
+    height: 156px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    padding: 23px 180px;
+    text-align: center;
+    background-size: contain !important;
+}
+
+.Competition_BG h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #0A0A0A;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.Competition_BG p {
+    font-size: 13px;
+    color: #858585;
+    font-weight: 400;
+}
+
+.Competition_list_box_items {
+    width: 33.33%;
+}
+
+.Competition_list_box_items_padding {
+    border: 0.5px solid #85858559;
+    border-radius: 20px;
+    padding: 15px;
+    width: 96%;
+    margin-bottom: 15px;
+}
+
+.Competition_list_box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Competition_list_items_name_box {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px dashed #85858559;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+}
+
+.Competition_list_items_name_box svg {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.Competition_list_items_name_box_name_1 p svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+span.datename_box {
+    font-size: 13px;
+    color: #858585;
+    font-weight: 400;
+    margin-right: 4px;
+}
+
+.Competition_list_items_name_box_name_1 p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 3px;
+}
+
+p.Competition_list_items_name_heding spna {
+    font-size: 13px;
+    color: #000000;
+    font-weight: 600;
+}
+
+p.Competition_list_items_name_heding spna.pending_name_box {
+    color: #F84444;
+    position: relative;
+    padding-left: 20px;
+}
+
+spna.list_items_name_box_date {
+    font-size: 11px;
+    color: #0A0A0A;
+    font-weight: 400;
+}
+
+p.Competition_list_items_name_heding spna.pending_name_box:after {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    width: 5px;
+    height: 5px;
+    content: "";
+    background: #F84444;
+    border-radius: 50%;
+}
+
+.Contestants_Competition_list_img img {
+    width: 36px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.Contestants_Competition_list {
+    display: flex;
+    align-items: center;
+}
+
+.Contestants_Competition_list p {
+    margin: 0;
+    font-size: 12px;
+    position: relative;
+    right: 12px;
+}
+
+.Contestants_Competition_list_img img:nth-child(2) {
+    position: relative;
+    right: 13px;
+}
+
+.Contestants_Competition_list_img img:nth-child(3) {
+    position: relative;
+    right: 25px;
+}
+
+.Prize_Pool_competition {
+    background: #F1F2F4;
+    padding: 16px;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.Prize_Pool_competition h3 {
+    font-size: 13px;
+    color: #0A0A0A;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.Prize_Pool_competition p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #858585;
+    margin: 0;
+}
+
+.Prize_Pool_competition p b {
+    color: #0A0A0A;
+}
+
+.competition_Time_until_start p {
+    margin: 0;
+    font-size: 12px;
+    color: #858585;
+}
+
+.competition_Time_until_start ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 0;
+    border: none;
+    padding-bottom: 17px;
+}
+
+.competition_Time_until_start ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid #AEB0B7;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 22%;
+    padding: 5px 0;
+}
+
+.competition_Time_until_start ul li b {
+    font-size: 15px;
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.competition_Time_until_start ul li span {
+    font-size: 9px;
+    color: #858585;
+    padding-left: 2px;
+    position: relative;
+    top: 1px;
+}
+
+.competition_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.competition_button button {
+    border: none;
+    background: #F1F2F4;
+    border-radius: 30px;
+    width: 47%;
+    padding: 7px 0;
+    font-size: 13px;
+    color: #0A0A0A;
+    font-weight: 500;
+}
+
+.competition_button button.Register_button {
+    background: #AEB0B7;
+    color: #0A0A0A;
+}
+
+.Competition_list_box_items:first-child .competition_button button.Register_button {
+    background: #FFD700;
+}
+
+.Competition_list_box_items:first-child .Prize_Pool_competition {
+    background: #FFF9D9;
+}
+
+.Competition_list_box_items:nth-child(2) p.Competition_list_items_name_heding spna.pending_name_box {
+    color: #FF8A00;
+}
+
+.Competition_list_box_items:nth-child(3) p.Competition_list_items_name_heding spna.pending_name_box {
+    color: #0EAC3A;
+}
+
+.Competition_list {
+    padding-top: 15px;
+}
+
+.Competition_MOdal {
+    max-width: 55%;
+}
+
+.Prizepool_reabk_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Prizepool_reabk_box_step {
+    width: 33.33%;
+}
+
+.Prizepool_reabk_box_step_items {
+    width: 94%;
+    margin: auto;
+    background: #FFF9D9;
+    padding: 25px 0;
+    border-radius: 20px;
+}
+
+.Prizepool_reabk_box_step_icons div {
+    position: relative;
+    bottom: 17px;
+    border: 3px solid #00000066;
+    width: fit-content;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.Prizepool_reabk_box_step_icons button {
+    display: block;
+    border: none;
+    border: aliceblue;
+    background: #0A0A0A;
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    border-radius: 30px;
+    padding: 1px 26px;
+    border: 5px solid #00000066;
+    margin: 0 auto;
+}
+
+
+.Prizepool_reabk_box_step_icons {
+    text-align: center;
+    background: #fff;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding-bottom: 15px;
+    height: 153px;
+}
+
+.Prizepool_reabk_box_step:nth-child(2) .Prizepool_reabk_box_step_items {
+    background-color: #FFD700;
+}
+
+.Prizepool_reabk_box_step_icons img {
+    width: 70px;
+    height: 70px;
+}
+
+.Prizepool_reabk_box_step:nth-child(2) .Prizepool_reabk_box_step_icons img {
+    width: 100px;
+    height: 100px;
+}
+
+.Prizepool_reabk_box_step_list p {
+    margin: 0;
+    padding-bottom: 3px;
+    color: #0A0A0A;
+    font-size: 12px;
+}
+
+.Prizepool_reabk_box_step_list p svg {
+    width: 13px;
+    margin-right: 2px;
+}
+
+.Prizepool_reabk_box_step_list {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+.March_competition_Prize_BG h2 {
+    color: #0A0A0A;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.March_competition_Prize_and_Rules {
+    margin-bottom: 30px;
+    padding: 11px 0;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.March_competition_Prize_and_Rules img {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.March_competition_Prize_Tabs ul {
+    border: 0;
+    width: max-content;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px 6px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+table.Prizepool_modal_table {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+table.Prizepool_modal_table tr {
+    border-bottom: 0.5px dashed #85858559;
+}
+
+tr.Prizepool_table_heading {
+    border: none !important;
+    border-radius: 10px;
+}
+
+table.Prizepool_modal_table tr th:first-child {
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+table.Prizepool_modal_table tr th:last-child {
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+
+table.Prizepool_modal_table tr th {
+    text-transform: uppercase;
+    background: #F1F2F4;
+
+}
+
+table.Prizepool_modal_table tr th,
+table.Prizepool_modal_table tr td {
+    padding: 10px;
+    font-size: 11px;
+    font-weight: 400;
+    color: #0A0A0A;
+}
+
+table.Prizepool_modal_table tr:nth-child(n+2) td:last-child {
+    color: #0EAC3A;
+}
+
+.Rules_items {
+    border: 0.5px solid #AEB0B7;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    padding: 8px 9px;
+    width: 100%;
+}
+
+.Rules_items svg {
+    width: 16px;
+}
+
+.Rules_items span {
+    font-size: 11.50px;
+    color: #0A0A0A;
+    font-weight: 400;
+    margin-left: 7px;
+}
+
+.rules_modal h1 {
+    font-size: 18px;
+    color: #0A0A0A;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.Competition_MOdal.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+    display: none !important;
+}
+
+.next_Previous {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.next_Previous ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.next_Previous li {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: #F1F2F4;
+    border-radius: 50%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #858585;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.next_Previous li.active {
+    background: #0A0A0A;
+    color: #fff;
+}
+
+.next_Previous p {
+    margin: 0;
+    font-size: 13px;
+    margin-left: 8px;
+    color: #858585;
+    cursor: pointer;
+}
+
+.next_Previous p:last-child {
+    color: #0A0A0A;
+}
+
+.next_Previous p svg {
+    margin: 0 8px;
+}
+
+.modal-body.participat {
+    text-align: center;
+    position: relative;
+}
+
+.modal-body.participat h2 {
+    font-size: 18px;
+    color: #0A0A0A;
+    font-weight: 600;
+}
+
+.modal-body.participat p {
+    font-size: 11px;
+    color: #858585;
+    font-weight: 400;
+    padding: 0px 25px;
+}
+
+.modal-body.participat svg {
+    width: 80px;
+    margin-bottom: 16px;
+}
+
+.participat_MOdal {
+    max-width: 30%;
+}
+
+.participat_MOdal .modal-content {
+    border-radius: 30px;
+}
+
+img.participat_close {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    width: 13px;
+    cursor: pointer;
+}
+
+.profile_User_from button {
+    background: #FFD700;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 29px;
+    font-size: 16px;
+    color: #0A0A0A;
+    font-weight: 500;
+}
+
+.Verification_center {
+    text-align: center;
+}
+
+.Verification_center h3 {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.Verification_center p {
+    padding: 0 210px;
+    font-size: 12px;
+    color: #858585;
+}
+
+.Verification_center img {
+    width: 200px;
+    padding: 30px 0;
+}
+
+tr.Consistency_History_table-heading th:first-child {
+    text-transform: uppercase;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+tr.Consistency_History_table-heading th:last-child {
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.cont_pipi_last p {
+    font-size: 10px;
+    text-align: center;
+    padding: 0 50px;
+    color: #858585;
+}
+
+.cont_pipi_last p b {
+    color: #0A0A0A;
 }
