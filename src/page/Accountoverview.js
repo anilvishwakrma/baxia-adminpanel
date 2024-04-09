@@ -14,9 +14,11 @@ const Accountoverview = () => {
                     <div className='account_Stats_grid'>
                         {Stats.map(stat => (
                             <div key={stat.id} className='account_Stats_box'>
-                                <p className='account_Stats_icons'>{stat.icon}</p>
-                                <h2>{stat.price}</h2>
-                                <p>{stat.name}</p>
+                                <div className='account_s_box_width'>
+                                    <p className='account_Stats_icons'>{stat.icon}</p>
+                                    <h2>{stat.price}</h2>
+                                    <p>{stat.name}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
