@@ -189,7 +189,7 @@ ul.item_menu {
 }
 
 ul.item_menu a svg {
-    width: 13px;
+    width: 14.50px;
 }
 
 .sitebar button img {
@@ -203,6 +203,17 @@ ul.item_menu a svg {
     padding: 23px;
     width: 100%;
     flex-grow: 1;
+    position: relative;
+}
+
+.chat_sms_icons {
+    position: fixed;
+    bottom: 16px;
+    right: 14px;
+}
+
+.chat_sms_icons svg {
+    width: 41px;
 }
 
 .wellcome_section {
@@ -250,7 +261,7 @@ button.Welcome_to_Baxia_button {
     font-size: 12px;
     color: #858585;
     font-weight: 400;
-    margin-right: 9px;
+    margin-right: 11px;
     cursor: pointer;
 }
 
@@ -261,7 +272,7 @@ button.Welcome_to_Baxia_button {
 
 .Account_tabs ul {
     border-bottom: 0.5px dashed #85858559;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
     padding-top: 24px;
     margin-bottom: 25px;
     padding-left: 0;
@@ -323,9 +334,10 @@ button.Welcome_to_Baxia_button {
 .account_s_box_width {
     background: #FFF9D9;
     border-radius: 15px;
-    padding: 12px 20px;
+    padding: 16px 20px;
 
 }
+
 .account_s_box_width {
     margin-right: 13px;
 }
@@ -365,7 +377,7 @@ p.account_Stats_icons svg {
     width: 100%;
     border: 0.5px solid #8585852e;
     border-radius: 20px;
-    padding: 30px 27px;
+    padding: 19px 17px;
 }
 
 .Accountoverview_status_cont {
@@ -385,14 +397,14 @@ p.account_Stats_icons svg {
 .Objective_box:nth-child(1) {
     border-bottom: 0.5px dashed #85858559;
     border-right: 0.5px dashed #85858559;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     padding-left: 0px;
 }
 
 .Objective_box:nth-child(2) {
     border-bottom: 0.5px dashed #85858559;
     /* border-right: 0.5px solid #85858559; */
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     padding-left: 20px;
 
 }
@@ -450,9 +462,10 @@ p.account_Stats_icons svg {
 
 .Objective_box_content_heding h2 {
     margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #0A0A0A;
     font-weight: 600;
+    padding-bottom: 9px;
 }
 
 .Accountoverview_status_Trading {
@@ -461,9 +474,41 @@ p.account_Stats_icons svg {
 
 .Objective_box_content p {
     margin: 0;
-    font-size: 11px;
+    font-size: 10.70px;
     color: #858585;
     padding-bottom: 5px;
+}
+
+.Objective_box_content p span:last-child {
+    position: relative;
+    margin-left: 15px;
+}
+
+.Objective_box_content p span:last-child:after {
+    position: absolute;
+    top: 5.50px;
+    left: -9px;
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: #0A0A0A;
+    border-radius: 50%;
+}
+
+.Objective_box:nth-child(3) span.Objective_box_content_span:after {
+    background-color: #0EAC3A !important;
+}
+
+.Objective_box:nth-child(4) span.Objective_box_content_span:after {
+    background-color: #0EAC3A !important;
+}
+
+.Objective_box:nth-child(1) span.Objective_box_content_span:after {
+    background-color: #FFD700 !important;
+}
+
+.Objective_box:nth-child(2) span.Objective_box_content_span:after {
+    background-color: #FFD700 !important;
 }
 
 .Objective_box_icos {
@@ -496,6 +541,13 @@ tr.Consistency_History_table-heading {
     font-size: 10px;
     color: #858585;
     font-weight: 400;
+    width: 16%;
+}
+
+.Topup_Reset .Consistency_History table td,
+.Topup_Reset .Consistency_History table th {
+    width: 16%;
+    font-size: 11px;
 }
 
 .Consistency_History table th {
@@ -503,7 +555,9 @@ tr.Consistency_History_table-heading {
 }
 
 .Consistency_History table th img {
-    width: 12px;
+    width: 11px;
+    position: relative;
+    bottom: 1px;
 }
 
 .Consistency_History table th {
@@ -537,6 +591,7 @@ tr.Consistency_History_table-heading {
     justify-content: space-between;
     border-bottom: 0.5px dashed #85858559;
     padding-bottom: 12px;
+    cursor: pointer;
 }
 
 .Accountoverview_user_name {
@@ -560,6 +615,12 @@ tr.Consistency_History_table-heading {
 
 .Accountoverview_user_SVG svg {
     width: 10px;
+    display: none;
+    transition: 0.3s;
+}
+
+.Accountoverview_user:hover .Accountoverview_user_SVG svg {
+    display: block;
 }
 
 .Accountoverview_user_name img {
@@ -741,19 +802,29 @@ tr.Consistency_History_table-heading th {
 
 .profile_User_information_input span {
     display: block;
-    font-size: 12px;
+    font-size: 10px;
     color: #0A0A0A;
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: 3px;
 }
 
 .profile_User_information_input input {
     background: #F1F2F4;
     border: none;
-    font-size: 11.50px;
+    font-size: 9.50px;
     color: #858585;
     width: 100%;
     height: 100%;
+}
+
+.profile_User_information_input input:focus-visible {
+    outline: none;
+    border: none;
+}
+
+.FaEye_password svg {
+    color: #858585;
+    width: 15px;
 }
 
 .FaEye_password {
@@ -786,8 +857,8 @@ tr.Consistency_History_table-heading th {
 }
 
 .profile_User_cont img {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     border: 5px solid #FFFFFF;
     border-radius: 50%;
     box-shadow: 10px 10px 30px 0px #01001D1A;
@@ -808,22 +879,22 @@ tr.Consistency_History_table-heading th {
 }
 
 .profile_User button {
-    height: 34px;
+    height: 29px;
     border: 0.5px solid #AEB0B7;
     border-radius: 40px;
     padding: 0 13px;
     background: #fff;
     color: #0A0A0A;
-    font-size: 11px;
+    font-size: 10.50px;
     font-weight: 600;
     position: relative;
-    bottom: 12px;
+    bottom: 37px;
 }
 
 .profile_User_name {
     padding-left: 12px;
     position: relative;
-    bottom: 12px;
+    bottom: 37px;
 }
 
 .profile_User_information_input .input_group {
@@ -873,18 +944,23 @@ tr.Consistency_History_table-heading th {
 }
 
 .grapg_serch img {
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     margin-right: 7px;
 }
 
 .grapg_serch input {
     border: none;
     background: transparent;
-    font-size: 13px;
+    font-size: 11px;
     padding: 3px 0;
     font-weight: 400;
     color: #858585;
+}
+
+.grapg_serch input:focus-visible {
+    outline: none;
+    border: none;
 }
 
 p.Reset_All_grapd {
@@ -954,13 +1030,25 @@ p.Reset_All_grapd {
 
 .Topup_Reset_heading select {
     border: 0.5px solid #AEB0B7;
-    height: 33px;
+    height: 32px;
     border-radius: 30px;
     padding: 0 20px;
-    font-size: 12px;
+    font-size: 11px;
     color: #858585;
-    width: 165px;
+    width: 148px;
     padding: 0 11px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.Topup_Reset_heading select:focus-visible {
+    outline: none;
+}
+
+.Topup_Reset_fillter_select svg {
+    position: relative;
+    left: -26px;
+    width: 7px;
 }
 
 .Topup_Reset_heading .Heading {
@@ -975,7 +1063,7 @@ p.Reset_All_grapd {
 }
 
 .DetailedStats_grid_box {
-    width: 32%;
+    width: 32.50%;
     background: #F1F2F4;
     border-radius: 20px;
     padding: 20px;
@@ -984,7 +1072,7 @@ p.Reset_All_grapd {
 .DetailedStats_grid_box ul {
     padding: 0px;
     list-style: none;
-    border: navajowhite;
+    border: none;
 }
 
 li.DetailedStats_grid_box_items {
@@ -1003,8 +1091,8 @@ li.DetailedStats_grid_box_items:last-child {
 }
 
 li.DetailedStats_grid_box_items b {
-    font-size: 12.50px;
-    font-weight: 500;
+    font-size: 10.50px;
+    font-weight: 600;
     color: #000000;
 }
 
@@ -1049,6 +1137,7 @@ li.DetailedStats_grid_box_items p img {
 
 .TradingOverview_page .Account_tabs ul {
     padding-left: 0;
+    padding-top: 10px;
 }
 
 .Trading_History tr.Consistency_History_table-heading th {
@@ -1063,7 +1152,7 @@ li.DetailedStats_grid_box_items p img {
 }
 
 .Trade_Growth_View_filter h3 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: #0A0A0A;
     margin: 0;
@@ -1080,21 +1169,24 @@ li.DetailedStats_grid_box_items p img {
     display: flex;
     align-items: center;
     padding: 7px 13px;
+    justify-content: space-between;
+    width: 270px;
 }
 
 .Trade_Growth_View_filter_cont_calss div {
     display: flex;
     align-items: center;
+    width: 48%;
 }
 
 .Trade_Growth_View_filter_cont_calss div input {
     border: none;
     background: transparent;
-    width: 60px;
+    width: 50px;
 }
 
 .Trade_Growth_View_filter_cont_calss div span {
-    font-size: 12px;
+    font-size: 11px;
     color: #858585;
     font-weight: 400;
 }
@@ -1672,8 +1764,8 @@ img.participat_close {
     background: #FFD700;
     border: none;
     border-radius: 30px;
-    padding: 5px 29px;
-    font-size: 16px;
+    padding: 6px 22px;
+    font-size: 13px;
     color: #0A0A0A;
     font-weight: 500;
 }
