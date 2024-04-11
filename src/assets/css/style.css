@@ -214,6 +214,7 @@ ul.item_menu a svg {
 
 .chat_sms_icons svg {
     width: 41px;
+    cursor: pointer;
 }
 
 .wellcome_section {
@@ -583,8 +584,9 @@ tr.Consistency_History_table-heading {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    color: #fff;
     padding: 25px;
+    padding-bottom: 80px;
+    padding-right: 0px !important;
 }
 
 .well_come_discount_conten_box {
@@ -730,6 +732,7 @@ tr.Consistency_History_table-heading {
 .well_come_discount_box_logo {
     text-align: center;
     padding: 20px 25px;
+    color: #fff;
 }
 
 .Discount_Offer_TIME_items p {
@@ -1005,6 +1008,12 @@ tr.Consistency_History_table-heading th {
 .FaEye_password svg {
     color: #858585;
     width: 15px;
+    cursor: pointer;
+}
+
+.FaEye_password img {
+    width: 12px;
+    cursor: pointer;
 }
 
 .FaEye_password {
@@ -1069,6 +1078,68 @@ tr.Consistency_History_table-heading th {
     font-weight: 600;
     position: relative;
     bottom: 37px;
+}
+
+.dail_Phone_code_Toggle {
+    display: flex;
+    align-items: center;
+    width: 53px;
+    border-right: 2px solid #858585;
+    margin-right: 11px;
+    height: 39%;
+}
+
+.dail_Phone_code_Toggle span.dail_Down_arrow img {
+    width: 9px;
+    margin-left: 6px;
+}
+
+.dail_Phone_code input[type="search"] {
+    padding: 7px 10px;
+    border-radius: 30px;
+    margin-bottom: 3px;
+}
+
+.dail_Phone_code {
+    position: absolute;
+    background: #fff;
+    top: 39px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 5px 11px;
+    border-radius: 7px;
+    width: 50%;
+}
+
+ul.dail_Phone_code_drop li {
+    display: flex;
+    align-items: center;
+    padding: 5px 7px;
+    border-bottom: 0.5px dashed #85858559;
+    margin-bottom: 2px;
+}
+
+ul.dail_Phone_code_drop li:last-child {
+    border: none;
+}
+
+ul.dail_Phone_code_drop {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+}
+
+ul.dail_Phone_code_drop li span {
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+ul.dail_Phone_code_drop li span:first-child {
+    margin-left: 0px;
+}
+
+.FaEye_password.dail_Phone_code_box {
+    position: relative;
 }
 
 .profile_User_name {
@@ -1165,6 +1236,11 @@ p.Reset_All_grapd {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 15px;
+}
+
+.check_grpg_box {
+    display: flex;
+    align-items: center;
 }
 
 .check_grpg_box input {
@@ -1363,6 +1439,15 @@ li.DetailedStats_grid_box_items p img {
     border: none;
     background: transparent;
     width: 50px;
+    font-size: 10px;
+    padding: 0px 5px;
+    font-weight: 400;
+    color: #858585;
+}
+
+.Trade_Growth_View_filter_cont_calss div input {
+    border: none;
+    outline: none;
 }
 
 .Trade_Growth_View_filter_cont_calss div span {
@@ -1994,4 +2079,48 @@ tr.Consistency_History_table-heading th:last-child {
 
 .cont_pipi_last p b {
     color: #0A0A0A;
+}
+
+/* ==========dtatic */
+.dail_code_static_box {
+    display: flex;
+    align-items: center;
+}
+
+.dail_code_static_box p {
+    margin: 0;
+    margin-right: 12px;
+    font-size: 12px;
+}
+
+.border_skskaks {
+    width: 2px;
+    height: 12px;
+    background: #858585;
+}
+
+img.dail_code_static_box_Down_arrow {
+    width: 10px;
+}
+
+.Inactive_Accounts img {
+    width: 283px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+}
+
+.Inactive_Accounts p {
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+    margin: 0;
+}
+
+.Inactive_Accounts {
+    text-align: center;
+    width: 100%;
+}
+
+.Account_tabs_perent {
+    width: 100%;
 }

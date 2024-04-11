@@ -3,6 +3,8 @@ import MEDAL_IMG from '../assets/SVG/Icons/madel.svg'
 import LOGO from '../assets/SVG/Dis-Logo.svg'
 import Discount_BG from '../assets/SVG/discount_BG.svg'
 import Coupon_code_BG from '../assets/SVG/Coupon_code_BG.svg'
+import InactiveAccounts from '../page/InactiveAccounts'
+import BreachedAccounts from '../page/BreachedAccounts'
 
 const WellcomeTabs = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -41,6 +43,14 @@ const WellcomeTabs = () => {
                                         <button>Dashboard</button>
                                     </div>
                                 </div>
+                            }
+                            {
+                                activeTab === 1 &&
+                                <InactiveAccounts />
+                            }
+                            {
+                                activeTab === 2 &&
+                                <BreachedAccounts />
                             }
                         </div>
                     </div>
