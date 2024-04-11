@@ -15,6 +15,12 @@ const ProfileIndex = () => {
 
     return (
         <div className='profile_page'>
+
+            <style>{`
+             .main_page_content {
+                padding: 0;
+            }
+            `}</style>
             <div className='profile_page_bg'>
                 <img src={PROFILE_BG_INM} />
             </div>

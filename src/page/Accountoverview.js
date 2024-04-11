@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Stats, TradingObjective } from '../constants/LocalData'
 import { Assets } from '../assets'
 import TEBAL_Q from '../assets/SVG/table_q.svg'
 
 
 const Accountoverview = () => {
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className='Accountoverview_page'>
@@ -186,7 +194,7 @@ const Accountoverview = () => {
                     <div className='Account_growth_Time'>
                         <h3>Today’s permitted loss will reset in</h3>
                         <p>Countdown timezone: GMT+2</p>
-                        <h1>10 : 16: 50</h1>
+                        <h1>{String(time.getHours()).padStart(2, '0')} : {String(time.getMinutes()).padStart(2, '0')}: {String(time.getSeconds()).padStart(2, '0')}</h1>
                     </div>
                 </div>
             </div>

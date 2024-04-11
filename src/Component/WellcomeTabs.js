@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MEDAL_IMG from '../assets/SVG/Icons/madel.svg'
 import LOGO from '../assets/SVG/Dis-Logo.svg'
 import Discount_BG from '../assets/SVG/discount_BG.svg'
@@ -7,7 +7,19 @@ import InactiveAccounts from '../page/InactiveAccounts'
 import BreachedAccounts from '../page/BreachedAccounts'
 
 const WellcomeTabs = () => {
+
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date());
+        }, 1000);
+        // Cleanup function to clear the interval
+        return () => clearInterval(interval);
+    }, []);
+
     const [activeTab, setActiveTab] = useState(0);
+
 
     const handleTabClick = (index) => {
         setActiveTab(index);
@@ -78,13 +90,13 @@ const WellcomeTabs = () => {
                                     <h3>Offer ends in</h3>
                                     <div className='Discount_Offer_TIME_grid'>
                                         <div className='Discount_Offer_TIME_items'>
-                                            <p> <span>10</span> <span>Hours</span></p>
+                                            <p> <span>{String(time.getHours()).padStart(2, '0')}</span> <span>Hours</span></p>
                                         </div>
                                         <div className='Discount_Offer_TIME_items'>
-                                            <p> <span>25</span> <span>Min</span></p>
+                                            <p> <span>{String(time.getMinutes()).padStart(2, '0')}</span> <span>Min</span></p>
                                         </div>
                                         <div className='Discount_Offer_TIME_items'>
-                                            <p> <span>35</span> <span>Sec</span></p>
+                                            <p> <span>{String(time.getSeconds()).padStart(2, '0')}</span> <span>Sec</span></p>
                                         </div>
                                     </div>
                                     <button>Start challenge</button>
