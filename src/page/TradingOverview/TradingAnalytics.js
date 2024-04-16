@@ -96,8 +96,7 @@ const state = {
             custom: function ({ series, seriesIndex, dataPointIndex, w }) {
                 let tooltipContent = '<div style="background-color: #0A0A0A; color: white; padding: 12px 30px 12px 15px; border-radius: 5px; width:102px; height:66px; display: flex; justify-content: center; align-items: flex-start; flex-direction:column; gap:10px; ">';
                 w.globals.series.map((serie, index) => {
-                    tooltipContent += `<div style="font-size:12px; display:flex; align-items:center; text-align:center; height:16px; gap:10px; "> 
-                    <img style="width:16px; height:16px; " src='/static/images/icons/${w.globals.seriesNames[index] === "Equity" ? "BoldColor" : "CategoryWhite"}.png' alt='Bold'/> ${serie[dataPointIndex]}</div>`;
+                    tooltipContent += `<div style="font-size:12px; display:flex; align-items:center; text-align:center; height:16px; gap:10px; "> <img style="width:16px; height:16px; " src='/static/images/icons/${w.globals.seriesNames[index] === "Equity" ? "BoldColor" : "CategoryWhite"}.png' alt='Bold'/> ${serie[dataPointIndex]}</div>`;
                 });
                 tooltipContent += '</div>';
                 return tooltipContent;

@@ -110,25 +110,21 @@ const DonutChart = () => {
             <div className='Reset_All_grapd_div'><p className='Reset_All_grapd'>Reset All</p></div>
             <div>
                 <div className='check_box_grapg'>
-                    <div class="check_grpg_box">
-                        <input type="checkbox" id="checkbox_1" onChange={(e) => handleCheckboxChange(e, 0)} />
-                        <label for="checkbox_1"></label>
-                        <span for="checkbox_1">US30</span>
+                    <div className='check_grpg_box'>
+                        <input type="checkbox" onChange={(e) => handleCheckboxChange(e, 0)} />
+                        <span >US30</span>
                     </div>
-                    <div class="check_grpg_box">
-                        <input type="checkbox" id="checkbox_2" onChange={(e) => handleCheckboxChange(e, 1)} />
-                        <label for="checkbox_2"></label>
-                        <span for="checkbox_2">XAUUSD</span>
+                    <div className='check_grpg_box'>
+                        <input type="checkbox" onChange={(e) => handleCheckboxChange(e, 1)} />
+                        <span >XAUUSD</span>
                     </div>
-                    <div class="check_grpg_box">
-                        <input type="checkbox" id="checkbox_3" onChange={(e) => handleCheckboxChange(e, 2)} />
-                        <label for="checkbox_3"></label>
-                        <span for="checkbox_3">USDCD</span>
+                    <div className='check_grpg_box'>
+                        <input type="checkbox" onChange={(e) => handleCheckboxChange(e, 2)} />
+                        <span >USDCD</span>
                     </div>
-                    <div class="check_grpg_box">
-                        <input type="checkbox" id="checkbox_4" onChange={(e) => handleCheckboxChange(e, 3)} />
-                        <label for="checkbox_4"></label>
-                        <span for="checkbox_4">EURUSD</span>
+                    <div className='check_grpg_box'>
+                        <input type="checkbox" onChange={(e) => handleCheckboxChange(e, 3)} />
+                        <span >EURUSD</span>
                     </div>
                 </div>
                 <div className='USDCD_grapg'>

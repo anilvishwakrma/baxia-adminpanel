@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import PROFILE_BG_INM from '../../assets/SVG/Profile_BG.svg';
 import { Assets } from '../../assets';
-import HIDE_PASSWORD from '../../assets/SVG/pass_hide.svg'
 
 const ChangePassword = () => {
     const [currentPassword, setCurrentPassword] = useState('');
@@ -40,10 +39,9 @@ const ChangePassword = () => {
                                     onChange={(e) => setCurrentPassword(e.target.value)}
                                 />
                                 {showCurrentPassword ? (
-                                    <FaEye onClick={toggleCurrentPasswordVisibility} />
+                                    <FaEye onClick={toggleConfirmPasswordVisibility} />
                                 ) : (
-                                    // <FaEyeSlash onClick={toggleCurrentPasswordVisibility} />
-                                    <img onClick={toggleCurrentPasswordVisibility} src={HIDE_PASSWORD} />
+                                    <FaEyeSlash onClick={toggleConfirmPasswordVisibility} />
                                 )}
                             </div>
                         </div>
@@ -59,9 +57,9 @@ const ChangePassword = () => {
                                     onChange={(e) => setNewPassword(e.target.value)}
                                 />
                                 {showNewPassword ? (
-                                    <FaEye onClick={toggleNewPasswordVisibility} />
+                                    <FaEye onClick={toggleConfirmPasswordVisibility} />
                                 ) : (
-                                    <img onClick={toggleCurrentPasswordVisibility} src={HIDE_PASSWORD} />
+                                    <FaEyeSlash onClick={toggleConfirmPasswordVisibility} />
                                 )}
                             </div>
                         </div>
@@ -79,7 +77,7 @@ const ChangePassword = () => {
                                 {showConfirmPassword ? (
                                     <FaEye onClick={toggleConfirmPasswordVisibility} />
                                 ) : (
-                                    <img onClick={toggleCurrentPasswordVisibility} src={HIDE_PASSWORD} />
+                                    <FaEyeSlash onClick={toggleConfirmPasswordVisibility} />
                                 )}
                             </div>
                         </div>

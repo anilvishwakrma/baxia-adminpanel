@@ -1,0 +1,160 @@
+body {
+  overflow: hidden !important;
+}
+
+.main_page_content {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.nav-m .active {
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.card-m2 tbody td {
+  background-color: transparent !important;
+}
+
+.tel-input {
+  border-radius: 17px !important;
+  height: 41px !important;
+}
+
+.react-tel-input .form-control {
+  border-radius: 50rem !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none !important;
+  border-radius: 50rem 0 0 50rem !important;
+}
+
+.react-tel-input .flag-dropdown:hover {
+  background-color: transparent !important;
+}
+
+.react-tel-input .form-control {
+  padding-left: 50px !important;
+}
+
+.react-tel-input .selected-flag {
+  border-right: 1px solid #556581 !important;
+  height: 14px !important;
+  /* margin-top: 12px !important; */
+}
+
+.cpn-btn::placeholder {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.cpn-btn:focus {
+  background: transparent;
+}
+
+.form-select:focus {
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.search-tabale-bill p {
+  color: #d1d1d1a3;
+  font-size: 14px;
+  padding-left: 19px;
+}
+
+.search-tabale-bill input {
+  color: #fff !important;
+  font-size: 11px;
+  padding: 9px 10px;
+  background: rgba(241, 242, 244, 0.15) !important;
+}
+
+.search-tabale-bill input::placeholder {
+  font-size: 11px;
+}
+
+.check-div label {
+  border: 1px solid #aeb0b7 !important;
+}
+
+.circle-card .circle-d p {
+  font-weight: 600;
+}
+
+.nav-m a {
+  margin-right: 10px;
+}
+
+.sidebar-r {
+  margin-left: -265px !important;
+}
+
+.sidebar-a {
+  margin-left: 0px !important;
+}
+
+.site_bar_close_arrow {
+  cursor: pointer;
+}
+
+.btn-outline-warning svg {
+  margin-right: 7px;
+}
+
+ul.item_menu a:hover {
+  color: #ffd700;
+  stroke: #ffd700;
+}
+
+ul.item_menu li:hover {
+  color: #ffd700;
+  stroke: #ffd700;
+  fill: #ffd700;
+}
+
+ul.item_menu .active {
+  color: #ffd700;
+  font-weight: 600;
+  stroke: #ffd700;
+}
+
+.react-tel-input .form-control {
+  background: #f1f2f4 !important;
+  border: moccasin !important;
+  /* font-size: 15px !important; */
+  /* padding: 12px 16px !important; */
+  margin-bottom: 12px !important;
+}
+
+.dot-collapse li {
+  list-style: initial !important;
+  color: #556581;
+}
+
+.dot-collapse li .active {
+  list-style: initial !important;
+}
+
+#pills-home-tab svg {
+  margin-right: 7px;
+}
+
+.btn-sm,
+.btn-group-sm>.btn {
+  font-size: 12px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-check-input:checked~label {
+  color: #0a0a0a;
+}
+
+.sitebar {
+  transition: all 0.5s ease;
+}
